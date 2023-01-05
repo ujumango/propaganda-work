@@ -1,0 +1,38 @@
+
+
+html{
+    width: 100%;
+    height: 100%;
+    font-size: calc(0.625vw + 4px) !important;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.sec_wrap{
+    margin: 0 auto;
+    padding: 0 5rem;
+    box-sizing: border-box;
+}
+
+.section{
+    padding: 5rem 0;
+}
+
+.whFont{
+    color: #fff;
+}
+
+
+h2{
+ font-size: 4rem;
+}
+h4{
+    font-size: 1.75rem;
+}
