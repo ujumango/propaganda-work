@@ -126,10 +126,7 @@
     font-weight: 500;
     margin-right: 10px;
 }
-.tab_title>ul>li span .active{
-  
-  border-bottom: 4px solid #000;
-}
+
 .tab_title>ul>li:after{
   content: ',';
   display: inline-block;
@@ -292,7 +289,13 @@ video{
     position: absolute;
     opacity: 1;
   }
-
+  .tab_title>ul>li span{
+    width: 0%;
+  }
+  .tab_title>ul>li.active2 span{
+    width: 100%;
+    border-bottom: 4px solid #000;
+  }
 /* SECTION 5 */
 
 .section5{

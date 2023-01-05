@@ -22,7 +22,7 @@ for(let i=0; i<tabBox.length; i++){
 
 //섹션 배경 바뀌면서 컨텐츠 변경
 
-let listT = document.querySelectorAll('.tab_title>ul>li');
+let listT = document.querySelectorAll('.section2 .tab_title>ul>li');
 let tab_wrap = document.querySelector('.section2 .tab_wrap');
 let tab_wrap2 = document.querySelector('.tab_wrap2');
 let tabCont = document.querySelectorAll('section2 .tabCont');
@@ -56,18 +56,18 @@ for(let i=0; i<listT.length; i++){
 }
 
 
-let title_js = document.querySelectorAll('.title_js>ul>li');
+let title_js = document.querySelectorAll('.section4 .title_js>ul>li');
 let js_cont = document.querySelectorAll('.js_cont');
 
 for(let j=0; j<title_js.length; j++){
     title_js[j].addEventListener('click', () =>{
         title_js.forEach((e) =>{
-            e.classList.remove('active');
+            e.classList.remove('active2');
             js_cont.forEach((e)=>{
                 e.classList.remove('fadeCon2');
             });
         })
-        title_js[j].classList.add('active');
+        title_js[j].classList.add('active2');
         js_cont[j].classList.add('fadeCon2');
     });
 
