@@ -1,6 +1,39 @@
 
 
 
+//모달팝업 
+let modal = document.querySelector('#modal')
+let modal_pop = document.querySelectorAll('.modal_pop');
+let tabBox = document.querySelectorAll('.tabBox');
+let closeBtn = document.querySelector('.close')
+let modal_wrap = document.querySelector('.modal_wrap')
+
+
+for(let i=0; i<tabBox.length; i++){
+    tabBox[i].addEventListener("click", () => {
+       modal_pop.forEach((e)=>{
+        e.style.display ="block"
+        document.body.style.overflow = "hidden";
+       })
+    })
+    closeBtn.addEventListener("click", () =>{
+        modal_pop[i].style.display = "none";
+        document.body.style.overflow = "unset";
+    })
+    // modal.addEventListener("cilck", () =>{
+    //     modal_pop.style.display = "none";
+    // })
+    //ESC 누르면 모달창 꺼지기
+window.addEventListener("keyup", e => {
+    if(modal_pop[i].style.display === "block" && e.key === "Escape") {
+        modal_pop[i].style.display = "none"
+        document.body.style.overflow = "unset";
+    }
+})
+};
+
+
+
 //섹션 배경 바뀌면서 컨텐츠 변경
 
 let listT = document.querySelectorAll('.section2 .tab_title>ul>li');
@@ -64,39 +97,3 @@ for(let j=0; j<title_js.length; j++){
   
     
 }
-
-
-
-
-//모달팝업 
-let modal = document.querySelector('#modal')
-let modal_pop = document.getElementsByClassName('modal_pop');
-// let modal_pop = document.querySelectorAll('.modal_pop');
-let tabBox = document.querySelectorAll('.tabBox');
-let closeBtn = document.querySelector('.close')
-let modal_wrap = document.querySelector('.modal_wrap')
-
-
-for(let i=0; i<tabBox.length; i++){
-    tabBox[i].addEventListener('click', () => {
-        // modal_pop[0].style.display = "block";
-        modal_pop[0].classList.add('fadePop');
-        document.body.style.overflow = "hidden";
-    })
-    closeBtn.addEventListener('click', () =>{
-
-        modal_pop[0].classList.remove('fadePop');
-        document.body.style.overflow = "unset";
-    })
-    modal.addEventListener("cilck", () =>{
-        modal_pop[0].classList.remove('fadePop');
-    })
-    //ESC 누르면 모달창 꺼지기
-window.addEventListener("keyup", e => {
-    if(e.key === "Escape") {
-        modal_pop[0].classList.remove('fadePop')
-        document.body.style.overflow = "unset";
-    }
-})
-};
-

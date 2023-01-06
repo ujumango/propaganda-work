@@ -87,9 +87,12 @@
         <section class="section2">
           <div class="sec2_wrap">
          
-              <div class="modal_pop">
+              <div class="modal_pop" id="modal">
+                <div class="modal_cont_wrap">
+                
                 <div class="modal_wrap">
-                        <div class="close">x</div>
+                  <div class="modal_wrap_cont">
+                      
                   <div class="modal_title"><h4>책제목</h4></div>
                 
                   <div class="modal_cont">
@@ -99,8 +102,11 @@
  2016년 늦봄부터 초여름에 이르는 한 달 동안 서평가 금정연과 소설가 김중혁이 모두 8곳의 서점을 방문했다. 독립서점, 테마 서점, 동네 서점이라 불리는 그곳에서 두 작가는 서점 주인과 책방 운영에 관한 대화를 나눴다. 신문과 잡지에 전형적으로 등장하는 소규모 서점의 모습과는 조금 다른, 주인장들의 고민과 보람이 드러난 이 대화는 동시대 새로운 서점의 자화상이라 할 만하다.
                     </pre></p>
                   </div>
+                  </div>
+                
              
-                </div>
+                </div></div>
+                <div class="close">close</div>
               </div>
              <div class="tab_wrap">
               <div class="tab_title sec_wrap">
@@ -331,12 +337,41 @@
       
           </div>
         </section>
-        <section class="section5"></section>
+        <section class="section5">
+          <div class="sec5_wrap">
+            <div class="tab_title sec_wrap">
+              <h4>BOOKS OF THE MONTH</h4>
+              <ul>
+                <li class="active"><span>종이는 아름답다</span></li>
+                <li><span>홈쇼핑 스크랩</span> </li>
+                <li><span>너의 나라에서</span></li>
+              </ul>
+            </div>
+            <div class="tab_content">
+              <div class="tab_swiper">
+                    <!-- Swiper -->
+          <div class="swiper mySwiper2-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
     <footer></footer>
-        <!-- Swiper -->
+    
+</body>
+    <!-- Swiper -->
   
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
@@ -356,7 +391,15 @@
           type: "fraction",
       }
     });
+    var swiper = new Swiper(".mySwiper2-1", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
       
     </script>
-</body>
 </html>

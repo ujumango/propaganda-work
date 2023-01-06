@@ -223,6 +223,7 @@
     position: absolute;
     width: 100%; 
     height: 100%;
+    overflow: hidden;
 
 
 }
@@ -235,6 +236,7 @@ video{
 	min-height : 100%;
 	width : auto;
 	height : auto;
+
 }
 .video_txt{
 
@@ -276,7 +278,7 @@ video{
   }
   .tab_content2{
     padding-bottom: 5rem;
-    width: 100%; height: 870px;
+    width: 100%; height: 770px;
     position: relative;
   }
   .section4 .tabCont{
@@ -311,23 +313,34 @@ video{
 /*모달팝업*/
 #main .modal_pop{
     position: fixed;
-    display: none;
+    /* display: none; */
+    opacity: 0;
     z-index: 80;
-    width: 100%; min-height: 100vh;
     background-color: #00000080;
     top: 0; left: 0;
     backdrop-filter: blur(10px);
-
+    opacity: 0;
+}
+.modal_pop.fadePop{
+  width: 100%; min-height: 100vh;
+  opacity: 1 !important;
+  transition : all 0.3s ease-out;
 }
 #main .modal_pop .modal_wrap{
     position: absolute;
-    top: 10%; left: 50%;
+    top: 5%; left: 50%;
     transform: translateX(-50%);
-    /* overflow: auto;
-    scrollbar-color: #00000030; */
-    width: 600px; height: 700px;
-}
+    overflow-y: scroll;
+    width: 70%; height: 700px;
+    padding: 20px 100px 50px 100px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
 
+}
+#main .modal_pop .modal_wrap_cont{
+  padding: 20px 0;
+  box-sizing: border-box;
+}
 #main .modal_pop .modal_wrap .modal_title{
     text-align: center;
 }
@@ -335,13 +348,13 @@ video{
     display: block;
     width: 300px; height: auto;
     text-align: center;
-    padding: 1rem 0 3rem 0;
+    padding: 0 0 3rem 0;
     box-sizing: border-box;
     margin: 0 auto;
 }
 #main .modal_pop .modal_wrap h4{
-    padding: 3rem 0;
-    color: #ffffffff;
+    padding-bottom: 3rem;
+    color: #ffffff;
     font-weight: 500;
 }
 #main .modal_pop .modal_wrap pre{
@@ -350,12 +363,50 @@ video{
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+#main .modal_cont_wrap{
+  width: 100%; height: 800px;
+  max-width: 1200px;
+position: relative;
+margin: 50px auto;
+padding: 0 50px;
+box-sizing: border-box;
+}
 #main .modal_pop .close{
-    position: absolute;
-    top:0; right: 0px;
+  position: absolute;
+    bottom: 8%; left: 50%;
+    transform: translateX(-50%);
     font-size: 32px;
-
+    vertical-align: middle;
     color: #fff;
-    padding: 0 12px;
+    padding: 2px 15px;
+    /* border: 1px solid #ffffff50; */
+}
+/* 모달팝업 스크롤바 커스텀..인데 안됨 ㅠ */
+#main .modal_wrap::-webkit-scrollbar-thumb{
+  background-color: #ff000050;
+}
+#main .modal_wrap::-webkit-scrollbar-track{
+  background-color: transparent;
+  border: 1px solid #ffffff30;
+}
 
+
+
+/* 섹션5 */
+.section5 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 300px; height: 500px;
+  text-align: center;
+  font-size: 18px;
+  background: rgb(0, 147, 184);
+
+}
+
+.section5 .swiper-slide-active{
+  width: 700px;
+  background-color: greenyellow;
 }
