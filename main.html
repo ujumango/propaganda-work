@@ -7,8 +7,7 @@
     <title>2023 프로파간다 작업 중...</title>
     <link rel="stylesheet" href="css/common/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -338,13 +337,13 @@
           </div>
         </section>
         <section class="section5">
-          <div class="sec5_wrap">
+          <div class="sec5_wrap ">
             <div class="tab_title sec_wrap">
               <h4>BOOKS OF THE MONTH</h4>
               <ul>
-                <li class="active"><span>종이는 아름답다</span></li>
-                <li><span>홈쇼핑 스크랩</span> </li>
-                <li><span>너의 나라에서</span></li>
+                <li class="active"><span>GRAPHIC #45 로고 나우</span></li>
+                <li><span>종이는 아름답다</span></li>
+                <li><span>홈쇼핑 스크랩</span></li>
               </ul>
             </div>
             <div class="tab_content">
@@ -352,12 +351,13 @@
                     <!-- Swiper -->
           <div class="swiper mySwiper2-1">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide"><img src="img/book_page/종이는아름답다-본문1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/book_page/종이는아름답다-본문2.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/book_page/종이는아름답다-본문3.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/book_page/종이는아름답다-본문4.jpg" alt=""></div>
               <div class="swiper-slide">Slide 5</div>
               <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -393,8 +393,15 @@
     });
     var swiper = new Swiper(".mySwiper2-1", {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 80,
         centeredSlides: true,
+        loop: true,
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 30,
+          stretch: 30,
+          depth: 100,
+          modifier: 1},
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
