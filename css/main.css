@@ -149,12 +149,12 @@
     display: block;
     padding: 1.25rem 0;
  }
- .tabText p{
+   .tabText p{
     width: 95%;
     font-size: 1rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
+    -webkit-line-clamp: 6;
     overflow: hidden;
     margin-top: 1.25rem;
     padding-right: 2.5rem;
@@ -214,28 +214,28 @@
     width: 100%; 
     height: 1200px;
     max-height: 100vh;
-    /* overflow: hidden;   */
+    overflow: visible;  
 
 
 }
 
 .video_wrap{
-    position: absolute;
-    width: 100%; 
-    /* height: 100%; */
-    overflow: hidden;
+    position: relative;
+    /* /* max-height: 100%; */
+    width: 100%;
+    height: 100%; 
+    overflow: visible;
 
 
 }
 
 video{
-    /* position : fixed; */
+    /* position : absolute; */
 	top : 0; 
 	left : 0;
-	min-width : 100%;
-	min-height : 100%;
 	width : 100%;
-	height : auto;
+	height : 100%;
+  object-fit:fill;
 
 }
 .video_txt{
@@ -308,7 +308,7 @@ video{
     /* display: none; */
     opacity: 0;
     z-index: 80;
-    background-color: #00000080;
+    background-color: #ffffff;
     top: 0; left: 0;
     backdrop-filter: blur(10px);
     opacity: 0;
@@ -326,7 +326,7 @@ video{
     width: 70%; height: 700px;
     padding: 20px 100px 50px 100px;
     box-sizing: border-box;
-    border: 1px solid #ffffff;
+    border: 1px solid #000;
 
 }
 #main .modal_pop .modal_wrap_cont{
@@ -346,11 +346,11 @@ video{
 }
 #main .modal_pop .modal_wrap h4{
     padding-bottom: 3rem;
-    color: #ffffff;
+    color: #000;
     font-weight: 500;
 }
 #main .modal_pop .modal_wrap pre{
-    color: #fff;
+    color: #000;
     width: 100%;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -369,7 +369,7 @@ box-sizing: border-box;
     transform: translateX(-50%);
     font-size: 32px;
     vertical-align: middle;
-    color: #fff;
+    color: #000;
     padding: 2px 15px;
     /* border: 1px solid #ffffff50; */
 }
