@@ -392,6 +392,7 @@ box-sizing: border-box;
 /* 섹션5 */
 .section5{
   width: 100%; height: auto;
+  padding-bottom: 4rem;
 }
 .section5 .sec5_wrap{
   width: 100%;
@@ -400,6 +401,7 @@ box-sizing: border-box;
   min-height: 100vh;
   background-color: #F8D382;
   position: relative;
+
 }
 .section5 .title_menu{
   width: 40%;
@@ -455,7 +457,7 @@ box-sizing: border-box;
 }
 .section5 .sec5_content .writer {
   display: block;
-  padding: 4.5rem 0 3rem 0;
+  padding: 3.5rem 0 3rem 0;
 }
 .section5 .sec5_content h2>span{
   border-bottom: 4px solid #000;
