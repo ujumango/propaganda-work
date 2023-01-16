@@ -316,61 +316,57 @@ video{
     background-color: #ffffff;
     top: 0; left: 0;
     backdrop-filter: blur(10px);
-    opacity: 0;
 }
 .modal_pop.fadePop{
   width: 100%; min-height: 100vh;
   opacity: 1 !important;
   transition : all 0.3s ease-out;
 }
-#main .modal_pop .modal_wrap{
-    position: absolute;
-    top: 5%; left: 50%;
-    transform: translateX(-50%);
-    overflow-y: scroll;
-    width: 70%; height: 700px;
-    padding: 20px 100px 50px 100px;
-    box-sizing: border-box;
-    border: 1px solid #000;
-
-}
 #main .modal_pop .modal_wrap_cont{
-  padding: 20px 0;
+  /* padding: 20px 0; */
   box-sizing: border-box;
+  display: flex;
 }
-#main .modal_pop .modal_wrap .modal_title{
-    text-align: center;
+#main .modal_pop .modal_left{
+width: 32%;
+height: 100vh;
+background-color: #95bbc4;
 }
-#main .modal_pop .modal_wrap img{
-    display: block;
-    width: 300px; height: auto;
-    text-align: center;
-    padding: 0 0 3rem 0;
-    box-sizing: border-box;
-    margin: 0 auto;
+#main .modal_pop .modal_left .modal_left_cont{
+  position: fixed;
+  padding: 5rem 0;
+   left: 3rem;
 }
-#main .modal_pop .modal_wrap h4{
-    padding-bottom: 3rem;
-    color: #000;
-    font-weight: 500;
+.modal_left_info span{
+  display: block;
+  padding: 3rem 0;
 }
-#main .modal_pop .modal_wrap pre{
-    color: #000;
-    width: 100%;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.modal_left_info p{
+  width: 80%;
+  padding: 3rem 0;
 }
-#main .modal_cont_wrap{
-  width: 100%; height: 800px;
-  max-width: 1200px;
-position: relative;
-margin: 50px auto;
-padding: 0 50px;
-box-sizing: border-box;
+.modal_left_info h2{
+  line-height: 1.4;
 }
+#main .modal_pop .modal_left .modal_left_info{
+  width: 52%;
+} 
+#main .modal_pop .modal_right{
+  width: 67%;
+  min-height: 100vh;
+  background-color: #98c495;
+  }
+  #main .modal_left_price{
+    display: flex;
+    gap: 50px;
+    border-bottom: 2px solid #000;
+  }
+  #main .modal_left_price span{
+    padding: 0 20px;
+  }
 #main .modal_pop .close{
   position: absolute;
-    bottom: 8%; left: 50%;
+    bottom: 10%; left: 15%;
     transform: translateX(-50%);
     font-size: 32px;
     vertical-align: middle;
@@ -403,7 +399,7 @@ box-sizing: border-box;
 .section5 .title_menu{
   width: 40%;
   position: absolute;
-  right: 5%;
+  right: 6%;
   z-index:2;
   }
 .section5 .title_menu>ul {
@@ -522,7 +518,7 @@ box-sizing: border-box;
   content: ',';
   display: inline-block;
 }
-.section6 .sec6_noti_box span{
+.sec6_noti_box span{
   display: inline-block;
   padding-right: 30px;
   background-image: url(../img/icon_out_arrow.png);
