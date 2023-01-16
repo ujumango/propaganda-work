@@ -48,7 +48,7 @@ header.active .rightMenu>li>a{
     display: flex;
    gap: 40px;
 }
-.h_logo{
+header .h_logo{
     font-weight: 800;
     font-size: 1.5rem;
     vertical-align: middle;
@@ -56,6 +56,41 @@ header.active .rightMenu>li>a{
 header.active .h_logo>a{
     color: #000;
 }
-.h_logo>a{
+header .h_logo>a{
     color: #fff;
+}
+
+
+
+/* footer */
+
+footer{
+    padding: 5rem 0;
+}
+footer .footerWrap{
+    display: flex;
+
+}
+footer .f_left{
+    width: 35%;
+}
+footer h2{
+    font-size: 3rem;
+}
+footer.h_logo>a{
+    color: #000;
+}
+footer .f_right{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 3.75rem; */
+    width: 65%;
+    /* background-color: antiquewhite; */
+}
+footer h6{
+    font-weight: 500;
+    color: #00000050;
+}
+footer .f_right ul>li{
+    font-size: 1.5rem;
 }

@@ -149,3 +149,24 @@ window.addEventListener('scroll', ()=>{
 })
 
 
+//date 출력하기
+date = new Date();
+const currentYear = date.getFullYear();
+const currentMonth = date.getMonth();
+const currentDate = date.getDate();
+const currentDay = date.getDay();
+const currentWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const currentMon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    
+
+
+    document.getElementById('sec5Day').innerHTML = `${currentWeek[currentDay]}`;
+    document.getElementById('sec5Date').innerHTML = `
+    ${currentDate} ${currentMon[currentMonth]}`
+    document.getElementById('sec5Year').innerHTML = `${currentYear}`;
+
+
+
+
+
