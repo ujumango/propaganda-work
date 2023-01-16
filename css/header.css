@@ -5,7 +5,13 @@ header{
     background-color: rgba(0,0,0,0.05);
     backdrop-filter: blur(15px);
     z-index: 10;
+    transition: background 0.3s;
     /* background-color: skyblue; */
+}
+header.active{
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    transition: background 0.3s;
 }
 nav{
     display: flex;
@@ -21,6 +27,9 @@ nav{
 .mainMenu>li{
     font-size: 1.25rem;
 }
+header.active .mainMenu>li>a{
+    color: #000000;
+}
 .mainMenu>li>a{
     vertical-align:middle;
     color: #fff;
@@ -28,6 +37,9 @@ nav{
 .rightMenu{
     display: flex;
     gap: 20px;  
+}
+header.active .rightMenu>li>a{
+    color: #000;
 }
 .rightMenu>li>a{
     color: #fff;
@@ -40,6 +52,9 @@ nav{
     font-weight: 800;
     font-size: 1.5rem;
     vertical-align: middle;
+}
+header.active .h_logo>a{
+    color: #000;
 }
 .h_logo>a{
     color: #fff;

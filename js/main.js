@@ -100,3 +100,52 @@ window.addEventListener("keyup", e => {
 })
 };
 
+
+//섹션5 배경색+사진 바뀌는 파트
+
+let sec5Title = document.querySelectorAll('.sec5Title');
+let sec5_wrap = document.querySelector('.sec5_wrap');
+let sec5cont = document.querySelectorAll('.sec5cont');
+
+for(let i=0; i<sec5Title.length; i++){
+    sec5Title[i].addEventListener('click',()=>{
+        sec5Title.forEach((e)=>{
+            e.classList.remove('active3');
+            sec5cont.forEach((e)=>{
+                e.classList.remove('active');
+            });
+        })
+        sec5Title[i].classList.add('active3');
+        sec5cont[i].classList.add('active');
+    });
+
+    sec5Title[0].addEventListener('click', ()=>{
+        sec5_wrap.style.backgroundColor = '#F8D382'
+    });
+    sec5Title[1].addEventListener('click', ()=>{
+        sec5_wrap.style.backgroundColor = '#D4CAC3'
+    });
+    sec5Title[2].addEventListener('click', ()=>{
+        sec5_wrap.style.backgroundColor = '#AA2331'
+    });
+}
+
+
+//header 테스트
+
+let section5 = document.querySelector('.section5');
+let sec5Top = section5.offsetTop;
+let header = document.querySelector('header')
+console.log(section5)
+console.log(sec5Top)
+window.addEventListener('scroll', ()=>{
+    let windowTop = window.scrollY;
+
+    if(windowTop > sec5Top-85){
+        header.classList.add('active')
+    }else{
+        header.classList.remove('active')
+    }
+})
+
+
