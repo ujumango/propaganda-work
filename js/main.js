@@ -67,6 +67,27 @@ for(let j=0; j<title_js.length; j++){
 
 
 
+//header 테스트
+
+let section5 = document.querySelector('.section5');
+let sec5Top = section5.offsetTop;
+let header = document.querySelector('header')
+console.log(section5)
+console.log(sec5Top)
+window.addEventListener('scroll', ()=>{
+    let windowTop = window.scrollY;
+
+    if(windowTop > sec5Top-85){
+        header.classList.add('active')
+    }else{
+        header.classList.remove('active')
+    }
+})
+
+
+
+
+
 
 //모달팝업 
 let modal = document.querySelector('#modal')
@@ -82,11 +103,13 @@ for(let i=0; i<tabBox.length; i++){
         // modal_pop[0].style.display = "block";
         modal_pop[0].classList.add('fadePop');
         document.body.style.overflow = "hidden";
+        header.classList.add('active')
     })
     closeBtn.addEventListener('click', () =>{
 
         modal_pop[0].classList.remove('fadePop');
         document.body.style.overflow = "unset";
+        header.classList.remove('active')
     })
     modal.addEventListener("cilck", () =>{
         modal_pop[0].classList.remove('fadePop');
@@ -96,6 +119,7 @@ window.addEventListener("keyup", e => {
     if(e.key === "Escape") {
         modal_pop[0].classList.remove('fadePop')
         document.body.style.overflow = "unset";
+        header.classList.remove('active')
     }
 })
 };
@@ -130,23 +154,6 @@ for(let i=0; i<sec5Title.length; i++){
     });
 }
 
-
-//header 테스트
-
-let section5 = document.querySelector('.section5');
-let sec5Top = section5.offsetTop;
-let header = document.querySelector('header')
-console.log(section5)
-console.log(sec5Top)
-window.addEventListener('scroll', ()=>{
-    let windowTop = window.scrollY;
-
-    if(windowTop > sec5Top-85){
-        header.classList.add('active')
-    }else{
-        header.classList.remove('active')
-    }
-})
 
 
 //date 출력하기
