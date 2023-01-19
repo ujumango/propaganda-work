@@ -307,174 +307,6 @@ video{
 
 
 
-/*모달팝업*/
-#main .modal_pop{
-    display: none;
-    width: 100%;
-    z-index: 1;
-    padding-top: 70px;
-    background-color: #ffffff;
-    top: 0px; left: 0;
-    backdrop-filter: blur(10px);
-}
-.modal_pop.fadePop{
-  position: fixed;
-  display: flex !important;
-  width: 100%; min-height: 100vh;
-  animation : modal_show 0.3s ease-out;
-}
-
-@keyframes modal_show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#main .modal_pop .modal_cont_wrap{
-  width: 100%;
-}
-#main .modal_pop .modal_wrap_cont{
-  /* padding: 20px 0; */
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-}
-#main .modal_pop .modal_left{
-width: 33%;
-height: 100vh;
-border-right: 1px solid #000;
-/* background-color: #95bbc4; */
-}
-#main .modal_pop .modal_left .modal_left_cont{
-  width: 100%;
-  padding: 5rem 10%;
-   /* left: 4rem; */
-   box-sizing: border-box;
-}
-.modal_left_info span{
-  display: block;
-  padding: 3rem 0;
-}
-.modal_left_info p{
-  font-size: 0.9rem;
-  font-weight: 300;
-  width: 100%;
-  padding: 5rem 0;
-}
-.modal_left_info h2{
-  width: 90%;
-  font-size: 3rem;
-  line-height: 1.4;
-}
-#main .modal_left .modal_left_info{
-  width: 90%;
-} 
-
-
-  #main .modal_left_price{
-    width: 65%;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 1rem 0;
-    border-bottom: 1px solid #000;
-  }
-  #main .modal_left_price h3{
-    font-weight: 500;
-  }
-  #main .modal_left_price span{
-    width: 20px; height: 20px;
-    display: inline-block;
-    padding: 0 10px;
-    background-repeat: no-repeat;
-
-    background-position: center center;
-  }
-  #main .modal_left_price .minus{
-    background-size: 17px auto;
-    background-image: url(../img/icons/remove.png);
-  }
-  #main .modal_left_price .plus{
-    background-size: 18px auto;
-    background-image: url(../img/icons/plus.png);
-  }
-
-  #main .modal_left_customer{
-    display: flex;
-    gap: 80px;
-    justify-content: flex-start;
-    padding: 3rem 0;
-  }
-  #main .modal_left_customer>div>h4{
-    padding-right: 2rem;
-    background-repeat: no-repeat;
-    background-position: top 1px right 2px;
-
-  }
-  #main .modal_left_customer .addCart>h4{
-    width: 100%; height:40px;
-    background-size:  38px auto;
-    background-image: url(../img/icons/check-box.png);
-  }
-  #main .modal_left_customer .like>h4{
-    width: 70%; height:40px;
-    background-size:  42px auto;
-    background-image: url(../img/icons/heart-line.png);
-    padding-left: 2rem;
-  }
-#main .modal_pop .close{
-  position: absolute;
-    bottom: 20%; left: 27%;
-    transform: translateX(-50%);
-    font-size: 32px;
-    vertical-align: middle;
-    color: #000;
-    padding: 2px 15px;
-    cursor: pointer;
-    /* border: 1px solid #ffffff50; */
-}
-#main .modal_right{
-  width: 67%;
-  height: 1200px;
-  min-height: 100vh;
-  margin: 0 auto;
-  overflow: auto !important;
-
-
-  }
- .modal_right ul{
-  width: 100%; 
-  padding-bottom: 3rem;
-
-
-}
- .modal_right ul>li div{
-  padding: 3rem;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  margin: 3rem;
-  
-}
-.modal_right ul>li>div img{
-display: block;
-width: 100%; height: auto;
-}
-
-/* 모달팝업 스크롤바 커스텀..인데 안됨 ㅠ */
-#main .modal_wrap::-webkit-scrollbar-thumb{
-  background-color: #ff000050;
-}
-#main .modal_wrap::-webkit-scrollbar-track{
-  background-color: transparent;
-  border: 1px solid #ffffff30;
-}
-
-
-
-
-
 
 
 /* 섹션5 */
@@ -617,4 +449,316 @@ width: 100%; height: auto;
   background-repeat: no-repeat;
   background-size: 15px auto;
   background-position: center right;
+}
+
+
+
+
+/*모달팝업*/
+#main .modal_pop{
+  display: none;
+  width: 100%;
+  z-index: 1;
+  padding-top: 70px;
+  background-color: #ffffff;
+  top: 0px; left: 0;
+  backdrop-filter: blur(10px);
+}
+.modal_pop.fadePop{
+position: fixed;
+display: flex !important;
+width: 100%; min-height: 100vh;
+animation : modal_show 0.3s ease-out;
+}
+
+@keyframes modal_show {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+#main .modal_pop .modal_cont_wrap{
+width: 100%;
+}
+#main .modal_pop .modal_wrap_cont{
+/* padding: 20px 0; */
+width: 100%;
+box-sizing: border-box;
+display: flex;
+}
+#main .modal_pop .modal_left{
+width: 33%;
+height: 100vh;
+/* border-right: 1px solid #000; */
+/* background-color: #95bbc4; */
+}
+#main .modal_pop .modal_left .modal_left_cont{
+width: 100%;
+padding: 3rem 10%;
+ /* left: 4rem; */
+ box-sizing: border-box;
+}
+.modal_left_info span{
+display: block;
+padding: 2rem 0;
+}
+.modal_left_info p{
+font-size: 0.9rem;
+font-weight: 300;
+width: 82%;
+padding: 5rem 0;
+}
+.modal_left_info h2{
+width: 90%;
+font-size: 3rem;
+line-height: 1.4;
+}
+#main .modal_left .modal_left_info{
+width: 90%;
+} 
+
+
+#main .modal_left_price{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0;
+  border-bottom: 1px solid #000;
+}
+#main .modal_left_price h3{
+  font-weight: 500;
+}
+#main .modal_left_price div:first-child{
+  display: flex;
+  justify-content: space-between;
+}
+#main .modal_left_price span{
+  width: 20px; height: 20px;
+  display: inline-block;
+  padding: 0 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+*
+#main .modal_left_price .minus{
+  background-size: 17px auto;
+  background-image: url(../img/icons/remove.png);
+}
+#main .modal_left_price .plus{
+  background-size: 17px auto;
+  background-image: url(../img/icons/plus.png);
+}
+
+#main .modal_left_customer{
+  display: flex;
+  /* flex-direction: columns; */
+  gap: 50px;
+  justify-content: flex-start;
+  padding: 5rem 0;
+}
+#main .modal_left_customer>div{
+  display: flex;
+}
+#main .modal_left_customer>div span{
+  padding-right: 2rem;
+  background-repeat: no-repeat;
+  background-position: top 1px right 2px;
+
+}
+#main .modal_left_customer .addCart>span{
+ height:40px;
+  background-size:  30px auto;
+  padding-left: 2rem;
+  background-image: url(../img/icons/check-box.png);
+  transition: all 0.5s ease-in-out;
+}
+#main .modal_left_customer .addCart.active>span{
+  background-image: url(../img/icons/checked-box.png);
+  transition: all 0.5s ease-in-out;
+}
+#main .modal_left_customer .like>span{
+  height:40px;
+  background-size:  32px auto;
+  background-image: url(../img/icons/heart-line.png);
+  padding-left: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+#main .modal_left_customer .like.active>span{
+  background-image: url(../img/icons/heart-red.png);
+  transition: all 0.3s ease-in-out;
+}
+@keyframes icons {
+0% {opcity : 0 }
+100% {opcity : 1 }
+}
+#main .modal_pop .close{
+position: absolute;
+  bottom: 15%; left: 26%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  vertical-align: middle;
+  color: #000;
+  padding: 2px 15px;
+  cursor: pointer;
+  /* border: 1px solid #ffffff50; */
+}
+#main .modal_right{
+width: 67%;
+height: 500px;
+min-height: 100vh;
+margin: 0 auto;
+overflow: auto !important;
+
+
+}
+.modal_right ul{
+width: 100%; 
+padding-bottom: 5rem;
+
+
+}
+.modal_right ul>li div{
+padding: 3rem;
+box-sizing: border-box;
+border: 1px solid #000;
+margin: 3rem;
+
+}
+.modal_right ul>li>div img{
+display: block;
+width: 100%; height: auto;
+}
+
+/* 모달팝업 스크롤바 커스텀..인데 안됨 ㅠ */
+#main .modal_wrap::-webkit-scrollbar-thumb{
+background-color: #ff000050;
+}
+#main .modal_wrap::-webkit-scrollbar-track{
+background-color: transparent;
+border: 1px solid #ffffff30;
+}
+
+
+/* 카트 사이드메뉴바 */
+
+#main .cart_pop{
+  /* display: none; */
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 13;
+
+}
+#main .cart_pop.active{
+  /* display: flex; */
+}
+#main .cart_bg{
+  width: 100%; height: 100vh;
+  display: none;
+  background-color: #00000050;
+}
+#main .cart_pop.active .cart_bg{
+  animation: cartPop 0.3s ease-in-out;
+  display: flex;
+}
+@keyframes cartPop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  }
+
+#main .cart_wrap{
+  position: absolute;
+  top: 0; 
+  right: -100%;
+  width: 30%; height: 100vh;
+  padding-top: 20px;
+  background-color: #222222;
+}
+#main .cart_pop.active .cart_wrap{
+  right: 0;
+  transition: all 0.2s ease-in-out;
+}
+#main .cart_menu ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+}
+#main .cart_menu li{
+  font-size: 1.25rem;
+  color: #fff;
+  cursor: pointer;
+}
+#main .cart_cont{
+  padding: 3rem 0;
+  margin: 0  2.5rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+
+}
+#main .cart_cont .cart_cont_title{
+  width: 100%;
+  padding-bottom: 2rem;
+}
+#main .cart_cont .cart_cont_title span{
+  /* font-weight: 400; */
+}
+#main .cart_cont>ul>li{
+  color: #fff;
+}
+#main .cart_cont>ul>li span{
+  display: block;
+}
+#main .cart_num  div:first-child span{
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px; height: 30px;
+  padding: 0 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#main .cart_num{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+#main .cart_num div:first-child{
+  display: flex;
+  border: 1px solid #fff;
+  padding: 4px;
+  box-sizing: border-box;
+  margin-right: 3rem;
+}
+#main .cart_num #amount{
+  font-size: 1.25rem;
+  text-align: center;
+}
+#main .cart_num .minus{
+  background-size: 14px auto;
+  background-image: url(../img/icons/remove_wh.png);
+}
+#main .cart_num .plus{
+  background-size: 14px auto;
+  background-image: url(../img/icons/plus_wh.png);
+}
+
+#main .total2{
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#main .total2>span{
+ font-size: 1.5rem;
+ padding-right: 1rem;
 }

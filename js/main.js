@@ -89,42 +89,6 @@ window.addEventListener('scroll', ()=>{
 
 
 
-//모달팝업 
-let modal = document.querySelector('#modal')
-let modal_pop = document.getElementsByClassName('modal_pop');
-// let modal_pop = document.querySelectorAll('.modal_pop');
-let tabBox = document.querySelectorAll('.tabBox');
-let closeBtn = document.querySelector('.close')
-let modal_wrap = document.querySelector('.modal_wrap')
-
-
-for(let i=0; i<tabBox.length; i++){
-    tabBox[i].addEventListener('click', () => {
-        // modal_pop[0].style.display = "block";
-        modal_pop[0].classList.add('fadePop');
-        document.body.style.overflow = "hidden";
-        header.classList.add('active')
-    })
-    closeBtn.addEventListener('click', () =>{
-
-        modal_pop[0].classList.remove('fadePop');
-        document.body.style.overflow = "unset";
-        header.classList.remove('active')
-    })
-    modal.addEventListener("cilck", () =>{
-        modal_pop[0].classList.remove('fadePop');
-    })
-    //ESC 누르면 모달창 꺼지기
-window.addEventListener("keyup", e => {
-    if(e.key === "Escape") {
-        modal_pop[0].classList.remove('fadePop')
-        document.body.style.overflow = "unset";
-        header.classList.remove('active')
-    }
-})
-};
-
-
 //섹션5 배경색+사진 바뀌는 파트
 
 let sec5Title = document.querySelectorAll('.sec5Title');

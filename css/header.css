@@ -4,7 +4,7 @@ header{
     /* border: 1px solid red; */
     background-color: rgba(0,0,0,0.05);
     backdrop-filter: blur(15px);
-    z-index: 10;
+    z-index: 5;
     transition: background 0.3s;
     /* background-color: skyblue; */
 }
@@ -38,11 +38,18 @@ header.active .mainMenu>li>a{
     display: flex;
     gap: 20px;  
 }
-header.active .rightMenu>li>a{
-    color: #000;
+header .rightMenu #cartNum{
+    padding: 0 1px;
+    box-sizing: border-box;
 }
-.rightMenu>li>a{
+header.active .rightMenu>li{
+    color: #000;
+    
+}
+.rightMenu>li{
     color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
 }
 .h_gnb{
     display: flex;
