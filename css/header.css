@@ -8,6 +8,7 @@ header{
     transition: background 0.3s;
     /* background-color: skyblue; */
 }
+
 header.active{
     background-color: #fff;
     border-bottom: 1px solid #000;
@@ -56,19 +57,36 @@ header.active .rightMenu>li{
    gap: 40px;
 }
 header .h_logo{
-    font-weight: 800;
-    font-size: 1.5rem;
+    /* width: 15%; */
     vertical-align: middle;
+    /* background-image: url(../img/logoWt.png); */
 }
+header .h_logo img{
+    display: block;
+    width: 150px; 
+}
+
 header.active .h_logo>a{
     color: #000;
 }
 header .h_logo>a{
     color: #fff;
 }
+nav .m_menu{
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 5px;
+}
+nav .m_menu .hamberger{
+    display: block;
 
-
-
+    width: 35px; height: 3px;
+ 
+    margin-bottom: 8px;
+    background-color: #F6F6F6;
+    transition: all 0.5s ease-in-out;
+  }
 /* footer */
 
 footer{
@@ -100,4 +118,22 @@ footer h6{
 }
 footer .f_right ul>li{
     font-size: 1.5rem;
+}
+
+
+
+@media (max-width:1000px) {
+    .mainMenu{
+        display: none;
+    }
+    .rightMenu{
+        display: none;
+    }
+    header .h_logo img{
+        display: block;
+        width: 120px; 
+    }
+    nav .m_menu{
+        display: flex;
+    }
 }

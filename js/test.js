@@ -113,7 +113,7 @@ function dynamic(arr){
     if(arr.length > 0){
         target.textContent += arr.shift();
         setTimeout(function(){
-            dynamic(arr)}, 100) //0.08초 후에 dynamic 함수를 실행
+            dynamic(arr)}, 200) //0.08초 후에 dynamic 함수를 실행
         
     }
 }
@@ -124,6 +124,7 @@ function reset(){
     const resplit = string.split("");
     //string의 텍스트를 여러개의 문자열로 나눠주고 resplit 변수에 할당
     dynamic(resplit);
+    
     //dynamic 함수에 resplit인자를 넣어서 실행
 }
 

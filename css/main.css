@@ -51,7 +51,7 @@
     font-size: 80px;
     color: #fff;
     font-weight: 400;
-    left: 5rem; bottom: 50px;
+    left: 5rem; bottom: 30px;
 }
 .section1 .swiper-pagination-total{
     position: absolute;
@@ -762,3 +762,31 @@ border: 1px solid #ffffff30;
  font-size: 1.5rem;
  padding-right: 1rem;
 }
+
+
+@media (max-width : 1400px) {
+  .tab .tab_title>ul{
+    width: 100%;
+  }
+}
+
+@media (max-width : 1000px) {
+  
+}
+
+@media (max-width:440px){
+  .whFont{
+    font-size : 1.4rem !important;
+  }
+  .section1 .img1 .sec1_sub_txt{
+    width: 70%;
+}
+  .section1 .swiper-slide{
+    height: 800px;
+  }
+  .section1 .sec1_shop{
+    font-size: 1.8rem !important;
+    padding-top:60px;
+  }
+}
+
